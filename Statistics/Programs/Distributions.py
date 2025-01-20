@@ -50,14 +50,16 @@ def main():
 
     menu1 = tkinter.Frame(leftFrame)
     
-    
+    menu1.rowconfigure(0, weight=1)
     #Dist Type
     distSelectLabel = tkinter.Label(menu1, text='Select Distribution Type')
-    distSelectLabel.grid(row=0, column=0)
+    distSelectLabel.grid(row=0, column=0, sticky="nsew")
     distName = tkinter.StringVar()
     distName.set(distOptions[0])
     distCombo = tkinter.OptionMenu(menu1, distName, *distOptions)
     distCombo.grid(row=1, column=0)
+    distSubmitButton = tkinter.Button(menu1, text="Submit", command=preview)
+    distSubmitButton.grid(row=1, column=1)
 
     previewButton = tkinter.Button(menu1, text="Preview", command=preview)
     previewButton.grid(row=2, column=0)
