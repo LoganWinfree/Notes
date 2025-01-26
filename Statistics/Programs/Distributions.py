@@ -45,6 +45,8 @@ def main():
    rightFrame.grid_propagate(0)
    rightFrame.columnconfigure(0, weight=1)
    
+##################################################################################
+
    #Update Variables
 
    distName = tkinter.StringVar()
